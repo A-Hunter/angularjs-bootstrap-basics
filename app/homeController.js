@@ -1,5 +1,9 @@
 app.controller("homeController", function($scope, $location, appService){
-    $scope.addNewEmployee = function(){
+    $scope.showCreateEmployeeForm = function(){
         $location.path("/newEmployeeForm");
-    }
+    };
+
+    $scope.showUpdateEmployeeForm = function(id){
+        $location.path("/updateEmployeeForm/"+id)
+    };
 })

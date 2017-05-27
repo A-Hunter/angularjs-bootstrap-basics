@@ -11,6 +11,10 @@ app.config(function($routeProvider){
             templateUrl: "app/employee_form/appTemplate.html",
             controller: "appController"
         })
+        .when("/updateEmployeeForm/:id",{
+            templateUrl: "app/employee_form/appTemplate.html",
+            controller: "appController"
+        })
         .otherwise({
             redirectTo: "/home"
         })
