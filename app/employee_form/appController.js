@@ -1,6 +1,9 @@
 app.controller('appController',
-  function appController($scope, appService){
+  function appController($scope, $window, appService){
     $scope.employee = appService.employee;
+
+    $scope.editableEmployee = angular.copy($scope.employee);
+
     $scope.departments = [
         "Chonen",
         "Ginning",
@@ -10,6 +13,12 @@ app.controller('appController',
     ];
 
     $scope.submitForm = function(){
-         console.log($scope.employee)
-    }
+         $scope.employee = angular.copy($scope.editableEmployee);
+         $window.history.back();
+    };
+
+    $scope.cancelForm = function(){
+        $scope.employee = $scope.editableEmployee;
+        $window.history.back();
+    };
 })
