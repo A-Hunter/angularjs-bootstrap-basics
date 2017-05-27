@@ -1,5 +1,7 @@
 <form role="form" class="form-horizontal">
 
+    <fieldset>
+        <legend>Basic Information</legend>
     <div class="form-group">
         <label for="fullName" class="col-sm-3 control-label">Name</label>
         <div class="col-sm-9">
@@ -25,15 +27,13 @@
                 </select>
             </div>
     </div>
-
+    </fieldset>
+    <fieldset>
+        <legend>Perks Types</legend>
     <div class="form-group">
             <div class="col-sm-3 control-label">
             </div>
             <div class="col-sm-9">
-        <br/>
-                <span><b>Perks</b></span>
-        <br/>
-
                 <div class="checkbox">
                     <label><input type="checkbox" value="perkCar" />Company Car</label>
                 </div>
@@ -45,13 +45,13 @@
                 </div>
             </div>
     </div>
-    <br/>
+    </fieldset>
+    <fieldset>
+        <legend>Payroll Type</legend>
     <div class="form-group">
         <div class="col-sm-3 control-label">
         </div>
         <div class="col-sm-9">
-        <span><b>Payroll Type</b></span>
-    <br/>
         <div class="radio">
             <label><input type="radio" name="payrollType" value="w2" />W-2</label>
         </div>
@@ -61,8 +61,10 @@
         <div class="radio">
         <label><input type="radio" name="payrollType" value="none" />None</label>
         </div>
-    <br/>
+        </div>
+        </div>
+    </fieldset>
+        <div class="col-sm-offset-3 col-sm-9">
         <input type="submit" class="btn btn-primary" value="Submit" />
-        </div>
-        </div>
+    </div>
 </form>
