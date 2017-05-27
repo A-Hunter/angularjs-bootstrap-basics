@@ -22,11 +22,8 @@
         <label for="departement" class="col-sm-3 control-label">Department</label>
             <div class="col-sm-9">
                 <select name="department" id="department" class="form-control"
-                        ng-model="employee.department">
-                    <option>Chonen</option>
-                    <option>Ginning</option>
-                    <option>Ambu</option>
-                    <option>Hokage</option>
+                        ng-model="employee.department"
+                        ng-options="dept for dept in departments">
                 </select>
             </div>
     </div>
