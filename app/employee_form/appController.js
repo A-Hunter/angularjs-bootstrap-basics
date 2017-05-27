@@ -1,4 +1,5 @@
-app.controller('appController', function appController($scope, appService){
+app.controller('appController',
+  function appController($scope, appService){
     $scope.employee = appService.employee;
     $scope.departments = [
         "Chonen",
@@ -7,4 +8,8 @@ app.controller('appController', function appController($scope, appService){
         "Hokage",
         "Uchiha"
     ];
+
+    $scope.submitForm = function(){
+         console.log($scope.employee)
+    }
 })
