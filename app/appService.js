@@ -7,6 +7,7 @@ app.factory('appService', function(){
                     fullName : "Itachi Uchiha",
                     notes : "A Uchiha clan member, a former ambu shinobi and an actual Akatsuki member",
                     department : "Uchiha",
+                    dateHired : "July 11 2015",
                     perkCar : true,
                     perkStock : false,
                     perkSixWeeks : true,

@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ["ngRoute"]);
+var app = angular.module('app', ['ngRoute','ui.bootstrap']);
 
 app.config(function($routeProvider){
     $routeProvider
@@ -18,4 +18,19 @@ app.config(function($routeProvider){
         .otherwise({
             redirectTo: "/home"
         })
+});
+app.controller("homeController", function($scope, $location, $modal, appService){
+
+    $scope.showCreateEmployeeForm = function(){
+//        $location.path("/newEmployeeForm");
+        $modal.open({
+            templateUrl: 'app/employee_form/appTemplate.html',
+            controller: 'appController'
+        });
+    };
+
+    $scope.showUpdateEmployeeForm = function(id){
+        $location.path("/updateEmployeeForm/"+id)
+    };
 })
+

@@ -1,5 +1,5 @@
 app.controller('appController',
-  function appController($scope, $window, $routeParams, appService){
+  function appController($scope, $window, $routeParams, $modalInstance, appService){
 
     if($routeParams.id){
         $scope.employee = appService.getEmployee($routeParams.id);
@@ -27,11 +27,13 @@ app.controller('appController',
             appService.updateEmployee($scope.editableEmployee);
         }
          $scope.employee = angular.copy($scope.editableEmployee);
-         $window.history.back();
+//         $window.history.back();
+        $modalInstance.close();
     };
 
     $scope.cancelForm = function(){
-        $scope.employee = $scope.editableEmployee;
-        $window.history.back();
+//        $scope.employee = $scope.editableEmployee;
+//        $window.history.back();
+        $modalInstance.dismiss();
     };
-})
+});
